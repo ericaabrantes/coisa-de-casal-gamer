@@ -18,13 +18,30 @@ body{
     color: var(--cor-texto);
 }
 
-.cabecalho__imagem{
-    width: 100%;
+.cabecalho{
     display: flex;
 }
 
-.cabecalho__titulo{
-    font-family: var(--fonte-titulo);
+.cabecalho__imagem{
+    width: 100%;
+    position: absolute;
+
 }
 
 
+/* deve ser metade do banner, mas responsivo */
+.cabecalho__titulo{
+    font-family: var(--fonte-titulo);
+    position: relative;
+    top:50px;
+}
+
+.jogosfavoritos_erica{
+    display: block;
+    background-color: #be2999;
+    width: 100%;
+}
+.jogosfavoritos_erica-imagem{
+    width: 25%;
+    position: absolute;
+}
