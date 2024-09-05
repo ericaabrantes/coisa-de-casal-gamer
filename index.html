@@ -70,6 +70,76 @@
     <section class="Jogos que já jogamos">
 
     </section>
+
+      <!-- Seção de vídeos do YouTube -->
+      <section id="youtube-videos"></section>
+
+      <script>
+          const apiKey = 'AIzaSyCiEzQywwkk7EMjiXmke1xNWsVaaaFsw10'; // Substitua com sua chave de API do YouTube
+          const channelId = 'UCLhU8EA_zszZUklxXhy83Yw'; // Substitua com o ID do canal do YouTube
+          const maxResults = 5; // Número de vídeos a serem exibidos
+  
+          async function fetchVideos() {
+              try {
+                  const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`);
+                  const data = await response.json();
+                  
+                  // Verifica se houve erro na resposta da API
+                  if (data.error) {
+                      console.error('Erro ao buscar vídeos:', data.error.message);
+                      return;
+                  }
+  
+                  const videosContainer = document.getElementById('youtube-videos');
+                  videosContainer.innerHTML = data.items.map(item => {
+                      const videoId = item.id.videoId;
+                      if (videoId) {
+                          return `<div class="video-container">
+                                      <iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>
+                                  </div>`;
+                      }
+                      return ''; // Evita erros em caso de dados inesperados
+                  }).join('');
+              } catch (error) {
+                  console.error('Erro ao fazer a requisição para a API do YouTube:', error);
+              }
+          }
+  
+          fetchVideos();
+      </script>
+
+      <div id="instagram-posts" class="instagram-posts"></div>
+
+      <script>
+          const accessToken = 'SUA_CHAVE_DE_ACESSO'; // Substitua pela sua chave de acesso do Instagram Graph API
+  
+          async function fetchInstagramPosts() {
+              try {
+                  const response = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink&access_token=${accessToken}`);
+                  const data = await response.json();
+  
+                  const postsContainer = document.getElementById('instagram-posts');
+                  postsContainer.innerHTML = data.data.map(post => {
+                      if (post.media_type === 'IMAGE' || post.media_type === 'CAROUSEL_ALBUM') {
+                          return `<a href="${post.permalink}" target="_blank" class="instagram-post">
+                                      <img src="${post.media_url}" alt="${post.caption || 'Instagram Post'}">
+                                  </a>`;
+                      } else if (post.media_type === 'VIDEO') {
+                          return `<a href="${post.permalink}" target="_blank" class="instagram-post">
+                                      <video controls width="100%" height="100%">
+                                          <source src="${post.media_url}" type="video/mp4">
+                                      </video>
+                                  </a>`;
+                      }
+                      return '';
+                  }).join('');
+              } catch (error) {
+                  console.error('Erro ao buscar postagens do Instagram:', error);
+              }
+          }
+  
+          fetchInstagramPosts();
+      </script>
 </body>
 
 </html>
