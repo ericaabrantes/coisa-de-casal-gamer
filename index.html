@@ -10,20 +10,23 @@
 </head>
 
 <body>
-    <header class="cabecalho">
+    <div class="banner-principal">
 
         <!-- menu navbar -->
-        <img class="cabecalho__imagem" src="./assets/Capa header.png" alt="Capa Principal Coisa de Casal Gamer">
-        <h1 class="cabecalho__titulo">Quem Somos</h1>
-        <p class="cabecalho__descrição">Desvendando os games juntos! Lives, reviews e muito mais.</p>
+        <img class="banner-principal__imagem" src="./assets/Capa header.png" alt="Capa Principal Coisa de Casal Gamer">
+        <div class="banner-principal__conteudo">
+            <h1 class="banner-principal__titulo">Quem Somos</h1>
+            <p class="banner-principal__descrição">Desvendando os games juntos! Lives, reviews e muito mais.</p>
+       
 
-        <ul class="cabecalho__redes-sociais">
+        <ul class="banner-principal__redes-sociais">
             <li>instagram</li>
             <li>youtube</li>
             <li>tiktok</li>
             <li>twitch</li>
         </ul>
-    </header>
+    </div>
+    </div>
 
 
     <section class="jogosfavoritos_erica">
@@ -71,7 +74,21 @@
 
     </section>
 
+     <!-- Seção de incorporação da Twitch -->
+     <h1> Vem pra Live!</h1>
+     <p class="twitch__descricao">Conheça nosso canal na Twitch! :)</p>
+     <div class="twitch-embed">
+        <iframe
+            src="https://player.twitch.tv/?channel=coisadecasalgamer&parent=coisadecasalgamer.com.br"
+            height="480"
+            width="720"
+            allowfullscreen>
+        </iframe>
+    </div>
+
       <!-- Seção de vídeos do YouTube -->
+      <h1> Ultimos Vídeos do Youtube</h1>
+      <p class="youtube-videos__descricao">Se inscreve no canal! :)</p>
       <section id="youtube-videos"></section>
 
       <script>
