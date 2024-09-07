@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">     <!-- add os simbolos das redes sociais-->
 
     <title>Coisa de Casal Gamer</title>
@@ -16,18 +17,19 @@
 
         <!-- menu navbar -->
         <img class="banner-principal__imagem" src="./assets/Capa header.png" alt="Capa Principal Coisa de Casal Gamer">
+    
         <div class="banner-principal__conteudo">
-            <h1 class="banner-principal__titulo">Quem Somos</h1>
-            <p class="banner-principal__descrição">Desvendando os games juntos! Lives, reviews e muito mais.</p>
-       
-
-        <ul class="banner-principal__redes-sociais">
-            <li>instagram</li>
-            <li>youtube</li>
-            <li>tiktok</li>
-            <li>twitch</li>
-        </ul>
-    </div>
+            <h1 class="banner-principal__titulo">Érica e Gregorio</h1>
+            <p class="banner-principal__descrição">Desvendando os games juntos! Lives, reviews e muito mais!</p>
+    
+            <!-- Redes Sociais em 2 Colunas -->
+            <ul class="banner-principal__redes-sociais">
+                <li><i class="fab fa-instagram"></i> @coisadecasalgamer</li>
+                <li><i class="fab fa-youtube"></i> /CoisaDeCasalGamer</li>
+                <li><i class="fab fa-tiktok"></i> @coisadecasalgamer</li>
+                <li><i class="fab fa-twitch"></i> /CoisaDeCasalGamer</li>
+            </ul>
+        </div>
     </div>
 
 
@@ -118,7 +120,7 @@
     </div>
 
       <!-- Seção de vídeos do YouTube -->
-      <h1> Ultimos Vídeos do Youtube</h1>
+      <h1 class="youtube-videos__titulos"> Ultimos Vídeos do Youtube</h1>
       <p class="youtube-videos__descricao">Se inscreve no canal! :)</p>
       <section id="youtube-videos"></section>
 
@@ -188,6 +190,11 @@
   
           fetchInstagramPosts();
       </script>
+
+      <footer class="rodape">
+        <p class="rodape__texto">Todos os Direitos Reservados 2024</p>
+        <p class="rodape__texto">Desenvolvido por Érica Abrantes Ignatios</p>
+      </footer>
 </body>
 
 </html>

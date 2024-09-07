@@ -48,7 +48,6 @@ h1{
     justify-content: center;
     text-align: center;
     padding: 20px;
-    /* background-color: rgba(0, 0, 0, 0.5); Fundo semi-transparente para contraste */
     max-width: 50%; /* Limita o conteúdo à metade direita */
     height: 100%;
     position: absolute;
@@ -66,8 +65,33 @@ h1{
 .banner-principal__descrição {
     font-family: var(--fonte-subtitulo);
     font-size: 1.2rem;
-    margin: 10px 0 0;
+    margin: 10px 0 20px;
 }
+
+/* Estilo para as Redes Sociais */
+.banner-principal__redes-sociais {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.banner-principal__redes-sociais li {
+    display: flex;
+    align-items: center;
+    font-family: var(--fonte-subtitulo);
+    font-size: 1rem;
+    color: var(--cor-texto);
+}
+
+.banner-principal__redes-sociais i {
+    margin-right: 8px; /* Espaço entre o ícone e o nome */
+    font-size: 1.2rem;
+}
+
+
 
 /* .jogosfavoritos_erica{
     display: block;
@@ -139,17 +163,7 @@ h1{
     color: var(--cor-texto);
 }
 
-/* Responsividade para telas menores */
-@media (min-width: 768px) {
-    .jogosfavoritos_erica-conteudo {
-        flex-direction: row; /* Alinha a imagem ao lado do carrossel em telas maiores */
-    }
 
-    .jogosfavoritos_erica-imagem {
-        margin-right: 20px;
-        margin-bottom: 0;
-    }
-}
 
 
 /* CArrossel Gregorio */
@@ -212,17 +226,6 @@ h1{
     color: var(--cor-texto);
 }
 
-/* Responsividade para telas maiores */
-@media (min-width: 768px) {
-    .jogosfavoritos_gregorio-conteudo {
-        flex-direction: row; /* Alinha o carrossel à esquerda e a imagem à direita em telas maiores */
-    }
-
-    .jogosfavoritos_gregorio-imagem {
-        margin-left: 20px; /* Adiciona margem à esquerda da imagem para afastá-la do carrossel */
-    }
-}
-
  /* Estilo para a seção de vídeos */
  #youtube-videos {
     display: flex;
@@ -230,6 +233,10 @@ h1{
     gap: 20px;
     justify-content: center;
     padding: 20px;
+}
+
+.youtube-videos__titulos{
+    margin-top: 16px;
 }
 
 .video-container {
@@ -259,4 +266,9 @@ h1{
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.rodape{
+   text-align: center;
+   margin: 1rem;
 }
