@@ -3,40 +3,49 @@
 /* Media Query para telas menores */
 @media (max-width: 768px) {
     .banner-principal__conteudo {
-        max-width: 80%; /* Aumenta o tamanho da área de conteúdo em telas menores */
+        max-width: 80%;
+        /* Aumenta o tamanho da área de conteúdo em telas menores */
         padding: 15px;
     }
 
     .banner-principal__redes-sociais {
-        grid-template-columns: 1fr; /* Coloca as redes sociais em uma coluna única */
+        grid-template-columns: 1fr;
+        /* Coloca as redes sociais em uma coluna única */
         gap: 5px;
     }
 
     .banner-principal__titulo {
-        font-size: 2rem; /* Reduz o tamanho do título em telas menores */
+        font-size: 2rem;
+        /* Reduz o tamanho do título em telas menores */
     }
 
     .banner-principal__descrição {
-        font-size: 1rem; /* Reduz o tamanho da descrição em telas menores */
+        font-size: 1rem;
+        /* Reduz o tamanho da descrição em telas menores */
     }
 }
 
 @media (max-width: 767px) {
     .jogosfavoritos_erica-conteudo {
-        flex-direction: column; /* Alinha a imagem acima do carrossel */
+        flex-direction: column;
+        /* Alinha a imagem acima do carrossel */
         align-items: center;
     }
 
     .jogosfavoritos_carrossel {
-        display: grid; /* Troca para grid para organizar jogos em 2 colunas */
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas de tamanho igual */
-        gap: 10px; /* Espaço entre os itens */
+        display: grid;
+        /* Troca para grid para organizar jogos em 2 colunas */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas de tamanho igual */
+        gap: 10px;
+        /* Espaço entre os itens */
     }
 }
 
 @media (min-width: 768px) {
     .jogosfavoritos_erica-conteudo {
-        flex-direction: row; /* Alinha a imagem ao lado do carrossel em telas maiores */
+        flex-direction: row;
+        /* Alinha a imagem ao lado do carrossel em telas maiores */
     }
 
     .jogosfavoritos_erica-imagem {
@@ -47,10 +56,57 @@
 
 @media (min-width: 768px) {
     .jogosfavoritos_gregorio-conteudo {
-        flex-direction: row; /* Alinha o carrossel à esquerda e a imagem à direita em telas maiores */
+        flex-direction: row;
+        /* Alinha o carrossel à esquerda e a imagem à direita em telas maiores */
     }
 
     .jogosfavoritos_gregorio-imagem {
-        margin-left: 20px; /* Adiciona margem à esquerda da imagem para afastá-la do carrossel */
+        margin-left: 20px;
+        /* Adiciona margem à esquerda da imagem para afastá-la do carrossel */
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* Estilo para a seção de vídeos */
+    #youtube-videos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+        max-width: 100%;
+        /* Garante que o container não ultrapasse a largura da tela */
+    }
+
+    .youtube-videos__titulos {
+        margin-top: 16px;
+        text-align: center;
+    }
+
+    .video-container {
+        width: 100%;
+        max-width: 560px;
+        /* Limita a largura máxima */
+        height: auto;
+        /* Permite que a altura se ajuste automaticamente */
+        margin-bottom: 20px;
+        position: relative;
+        /* Necessário para o truque do padding-bottom */
+        padding-bottom: 56.25%;
+        /* Mantém a proporção de 16:9 */
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .youtube-videos__descricao {
+        text-align: center;
+        padding: 1rem;
     }
 }
