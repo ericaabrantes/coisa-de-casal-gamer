@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">     <!-- add os simbolos das redes sociais-->
+
     <title>Coisa de Casal Gamer</title>
 </head>
 
@@ -31,30 +33,59 @@
 
     <section class="jogosfavoritos_erica">
         <h2 class="jogosfavoritos_erica-titulo">Jogos Favoritos</h2>
-        <img class="jogosfavoritos_erica-imagem" src="./assets/Érica arte.png" alt="">
-
-        <ul>
-            <li>Path of Exile</li>
-            <li>Life is Strange</li>
-            <li>Dead by Daylight</li>
-            <li>Life is Strange</li>
-            <li>Life is Strange</li>
-            <li>Life is Strange</li>
-        </ul>
+        <div class="jogosfavoritos_erica-conteudo">
+            <!-- Imagem da pessoa -->
+            <img class="jogosfavoritos_erica-imagem" src="./assets/Érica arte.png" alt="Imagem de Érica">
+    
+            <!-- Carrossel de jogos -->
+            <div class="jogosfavoritos_carrossel">
+                <div class="carrossel-item">
+                    <img src="./assets/Favs Érica/pathofexile.webp" alt="Path of Exile">
+                    <p>Path of Exile</p>
+                </div>
+                <div class="carrossel-item">
+                    <img src="./assets/Favs Érica/lis.png"Life is Strange">
+                    <p>Life is Strange</p>
+                </div>
+                <div class="carrossel-item">
+                    <img src="./assets/Favs Érica/dbd.jpg" alt="Dead by Daylight">
+                    <p>Dead by Daylight</p>
+                </div>
+                <div class="carrossel-item">
+                    <img src="./assets/Favs Érica/Horizon_Zero_Dawn_capa.png" alt="Horizon Zero Dawn">
+                    <p>Horizon Zero Dawn</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="jogosfavoritos_gregorio">
         <h2 class="jogosfavoritos_gregorio-titulo">Jogos Favoritos</h2>
-        <img class="jogosfavoritos_gregorio-imagem" src="./assets/Gregorio arte.png" alt="">
-
-        <ul>
-            <li>Dark Souls Remastered</li>
-            <li>Life is Strange</li>
-            <li>Life is Strange</li>
-            <li>Life is Strange</li>
-            <li>Life is Strange</li>
-            <li>Life is Strange</li>
-        </ul>
+        <div class="jogosfavoritos_gregorio-conteudo">
+            <!-- Carrossel de jogos -->
+            <div class="jogosfavoritos_carrossel">
+                <div class="carrossel-item">
+                    <img src="./assets/favs Greg/Dark souls remastered.jpg" alt="Dark Souls Remastered">
+                    <p>Dark Souls Remastered</p>
+                </div>
+                <div class="carrossel-item">
+                    <img src="./assets/favs Greg/walking dead.jpg" alt="Life is Strange">
+                    <p>The Walking Dead: The Telltale</p>
+                </div>
+                <div class="carrossel-item">
+                    <img src="./assets/favs Greg/elden ring.webp" alt="Outro Jogo">
+                    <p>Elden Ring</p>
+                </div>
+                <div class="carrossel-item">
+                    <img src="./assets/favs Greg/gt7.jpg" alt="Outro Jogo">
+                    <p>Gran Turismo 7</p>
+                </div>
+            </div>
+    
+            <!-- Imagem da pessoa -->
+            <img class="jogosfavoritos_gregorio-imagem" src="./assets/Gregorio arte.png" alt="Imagem de Gregório">
+        </div>
+    </section>
     </section>
 
 
@@ -79,7 +110,7 @@
      <p class="twitch__descricao">Conheça nosso canal na Twitch! :)</p>
      <div class="twitch-embed">
         <iframe
-            src="https://player.twitch.tv/?channel=coisadecasalgamer&parent=coisadecasalgamer.com.br"
+            src="https://player.twitch.tv/?channel=coisadecasalgamer&parent=coisa-de-casal-gamer.vercel.app"
             height="480"
             width="720"
             allowfullscreen>

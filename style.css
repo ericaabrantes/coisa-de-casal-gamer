@@ -69,7 +69,7 @@ h1{
     margin: 10px 0 0;
 }
 
-.jogosfavoritos_erica{
+/* .jogosfavoritos_erica{
     display: block;
     background-color: #be2999;
     width: 100%;
@@ -77,6 +77,150 @@ h1{
 .jogosfavoritos_erica-imagem{
     width: 25%;
     position: absolute;
+} */
+
+.jogosfavoritos_erica {
+    background-color: #ff99cc; /* Fundo rosa */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.jogosfavoritos_erica-titulo {
+    text-align: center;
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto);
+    margin-bottom: 20px;
+}
+
+.jogosfavoritos_erica-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.jogosfavoritos_erica-imagem {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.jogosfavoritos_carrossel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Permite o carrossel horizontal */
+    padding: 10px;
+    scroll-snap-type: x mandatory; /* Ativa o efeito de "snap" */
+}
+
+.carrossel-item {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: start; /* Faz os itens pararem no início do container */
+    width: 120px;
+}
+
+.carrossel-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    max-height: 120px;
+}
+
+.carrossel-item p {
+    text-align: center;
+    font-family: var(--fonte-subtitulo);
+    font-size: 14px;
+    color: var(--cor-texto);
+}
+
+/* Responsividade para telas menores */
+@media (min-width: 768px) {
+    .jogosfavoritos_erica-conteudo {
+        flex-direction: row; /* Alinha a imagem ao lado do carrossel em telas maiores */
+    }
+
+    .jogosfavoritos_erica-imagem {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+}
+
+
+/* CArrossel Gregorio */
+.jogosfavoritos_gregorio {
+    background-color: #87CEEB; /* Fundo azul */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.jogosfavoritos_gregorio-titulo {
+    text-align: center;
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto);
+    margin-bottom: 20px;
+}
+
+.jogosfavoritos_gregorio-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.jogosfavoritos_gregorio-imagem {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.jogosfavoritos_carrossel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Permite o carrossel horizontal */
+    padding: 10px;
+    scroll-snap-type: x mandatory; /* Ativa o efeito de "snap" */
+}
+
+.carrossel-item {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: start; /* Faz os itens pararem no início do container */
+    width: 120px;
+}
+
+.carrossel-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.carrossel-item p {
+    text-align: center;
+    font-family: var(--fonte-subtitulo);
+    font-size: 14px;
+    color: var(--cor-texto);
+}
+
+/* Responsividade para telas maiores */
+@media (min-width: 768px) {
+    .jogosfavoritos_gregorio-conteudo {
+        flex-direction: row; /* Alinha o carrossel à esquerda e a imagem à direita em telas maiores */
+    }
+
+    .jogosfavoritos_gregorio-imagem {
+        margin-left: 20px; /* Adiciona margem à esquerda da imagem para afastá-la do carrossel */
+    }
 }
 
  /* Estilo para a seção de vídeos */
