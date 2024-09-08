@@ -2,6 +2,11 @@
 /* Responsividade para telas menores */
 /* Media Query para telas menores */
 @media (max-width: 768px) {
+
+    .banner-principal__imagem {
+        content: url('./assets/backgroundmobile.png'); /* Substitua pela versão mobile da imagem */
+    }
+
     .banner-principal__conteudo {
         max-width: 80%;
         /* Aumenta o tamanho da área de conteúdo em telas menores */
@@ -110,3 +115,4 @@
         padding: 1rem;
     }
 }
+
